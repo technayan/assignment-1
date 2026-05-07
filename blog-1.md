@@ -6,7 +6,7 @@
 
 any allows us to use any type of data in a variable and also access any property even if the property is not available for the data type. It also bypasses the compiler safety mechanisms. So, we can't see any error while using a method that is not available on that type. We only see the error on runtime.
 
-For example:
+For example: </br>
 <code>
 const data: any = 123;
 console.log(data.toUpperCase());  
@@ -20,7 +20,7 @@ Here we want to access a method of string on a number data type. TypeScript give
 
 we use unknown on those variables who's type is not yet known. But we need to check it's type before using the value or access any method. Unless TypeScript shows error on development.
 
-For example:
+For example: </br>
 <code>
 const user: unknown = "Nayan";
 console.log(user.toUpperCase());
@@ -30,7 +30,7 @@ Here we are trying to use a method of string on string data type. But we are get
 
 We have to check the type before using the value or access any method.
 
-Correction:
+Correction: </br>
 <code>
 const user: unknown = "Nayan";
 
@@ -46,7 +46,7 @@ Now, TypeScript knows the data type of the variable inside the if block, so the 
 
 Type narrowing means reducing a broad or unknown type into a specific type using checks called type guard.
 
-for example:
+For example: </br>
 <code>
 const checks = (value: string | number) => {
 if (typeof value === "string") {
@@ -61,25 +61,26 @@ Here we start assuming the value be string or number. Then inside the first bloc
 
 There are some ways to narrow types:
 
-### typeof:
-
+### typeof: 
+</br>
 <code>
     if (typeof value === 'string');
 </code>
 used for string, number, boolean, undefined, function.
 
 ### instanceof:
-
+</br>
 <code>
     if(person instanceof Person);
 </code>
 used for classes and objects.
 
 ### in operator:
-
+</br>
 <code>
     if("name" in obj);
 </code>
 checks wheather a property exist.
+</br> </br>
 
 So, we can say that any is a "type safety hole" for bypassing type safety in TypeScript. And unknown is the safer choice for handling unpredictable data as the developer has to checks it's type before using it. Type Narrowing helps us to narrow down types from broad and unknown types using checks called type guard.

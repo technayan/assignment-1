@@ -4,7 +4,8 @@ Pick and Omit are utility types of TypeScript. These utility types prevent dupli
 
 ## Prevent Duplication:
 
-If we don't us utility types and want to create types from a master interface then our code base should like this:
+If we don't us utility types and want to create types from a master interface then our code base should like this: </br>
+code: </br>
 <code>
 interface User {
 username: string;
@@ -34,8 +35,8 @@ If we use Pick and Omit utility types our code base would be much cleaner and we
 
 ### Pick<Type, Keys>:
 
-Pick constructs a new type by selecting targeted subset of properties (provided in Keys) from an existing one (provided in Type).
-
+Pick constructs a new type by selecting targeted subset of properties (provided in Keys) from an existing one (provided in Type).</br>
+code: </br>
 <code>
     interface User {
         username: string;
@@ -53,8 +54,8 @@ Here, we create a new type with properties -> "username" and "age" from master i
 
 ### Omit<Type, Keys>:
 
-Omit constructs a new type by stripping away targeted subset of properties (provided in Keys) from an existing one (provided in Type).
-
+Omit constructs a new type by stripping away targeted subset of properties (provided in Keys) from an existing one (provided in Type). </br>
+code: </br>
 <code>
     interface User {
         username: string;
